@@ -81,7 +81,7 @@ typedef enum  {BUTTON_OFF = 0, BUTTON_ON_400, BUTTON_ON_100} ButtonMode_t;
 
 /*------------------- END user defined Types ---------------------------------*/
 
-TaskHandle_t ButtonTaskHandler;
+TaskHandle_t Button_Task_Handler;
 TaskHandle_t LED_Task_100ms_Handler;
 TaskHandle_t LED_Task_400ms_Handler;
 
@@ -97,6 +97,7 @@ static void prvSetupHardware( void );
 
 static volatile ButtonMode_t ButtonMode  = BUTTON_OFF;
 static	uint8_t PressCount = 0; // I declared it global to be able to see it in debugging mode
+static	uint8_t PressCount_LastValue_BeforeReset = 0; // this variable is required only for Debuging/Demonestration purposes
 static pinState_t LEDCurentState = PIN_IS_LOW;
 
 /*------------------------ END Global variables --------------------------------*/
@@ -106,7 +107,7 @@ static pinState_t LEDCurentState = PIN_IS_LOW;
 * BUTTON_OFF, BUTTON_ON_400, BUTTON_ON_100
 * based on the duration of pressing the buttom
 */
-void ButtonTask( void * pvParameters )
+void Button_Task( void * pvParameters )
 {
 	pinState_t ButtonCurrentState = PIN_IS_LOW;
 	pinState_t ButtonPreviousState = PIN_IS_LOW;
@@ -146,7 +147,8 @@ void ButtonTask( void * pvParameters )
 							{
 								ButtonMode  = BUTTON_ON_100; // t > 4000ms
 							}
-					
+							
+					PressCount_LastValue_BeforeReset = PressCount;
 					PressCount = 0;
 					ButtonPreviousState = ButtonCurrentState;
 				}
@@ -207,12 +209,12 @@ int main( void )
 	prvSetupHardware();
 
 		    /* Create Tasks here */
-	 xTaskCreate(    ButtonTask,
-                   "ButtonTask",
+	 xTaskCreate(    Button_Task,
+                   "Button_Task",
                    125,
                    NULL,
                    2,
-                   &ButtonTaskHandler
+                   &Button_Task_Handler
                           );
 	    
 	/* Create Tasks here */

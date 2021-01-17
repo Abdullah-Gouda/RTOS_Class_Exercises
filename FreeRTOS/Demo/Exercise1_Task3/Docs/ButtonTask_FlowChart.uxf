@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>738</x>
+      <y>189</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>909</x>
+      <y>216</y>
+      <w>522</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>*Used variables:*
+- PressCount: number of executed Button_Task since last rising edge detection
+- ButtonCurrentState: Buttun status in the current task execution
+- ButtonPreviousState: Button status from the previous task execution
+
+fontsize=16
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>657</x>
+      <y>243</y>
+      <w>171</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Init:
+PressCount = 0
+ButtonCurrentState = LOW
+ButtonPreviousState = LOW
+bg=#ddebe1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>198</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>639</x>
+      <y>378</y>
+      <w>225</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>
+ButtonCurrentState = PORT0.PIN0
+bg=#ddebe1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>675</x>
+      <y>450</y>
+      <w>144</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>bg=green
+type=decision
+ButtonCurrentState</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>306</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>414</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>468</y>
+      <w>450</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[HIGH]</panel_attributes>
+    <additional_attributes>440.0;100.0;440.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>1134</x>
+      <y>558</y>
+      <w>144</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>bg=green
+type=decision
+ButtonPreviousState</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1269</x>
+      <y>576</y>
+      <w>198</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[HIGH]</panel_attributes>
+    <additional_attributes>160.0;130.0;160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1368</x>
+      <y>693</y>
+      <w>99</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>PressCount++
+bg=#ddebe1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>576</y>
+      <w>108</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[LOW]</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>54</y>
+      <w>450</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=1.5
+group=1</panel_attributes>
+    <additional_attributes>10.0;70.0;70.0;70.0;70.0;10.0;340.0;10.0;340.0;80.0;480.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>99</y>
+      <w>72</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+*Button*
+
+group=1</panel_attributes>
+    <additional_attributes>10.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>54</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+group=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>873</x>
+      <y>54</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+group=1</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>963</x>
+      <y>684</y>
+      <w>252</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>PressCount++
+ButtonPreviousState = ButtonCurrentState
+bg=#ddebe1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>891</x>
+      <y>504</y>
+      <w>207</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Rising edge detected.
+Start incremeant the PressCounter.
+bg=#eb4949</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1071</x>
+      <y>540</y>
+      <w>54</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>40.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>468</y>
+      <w>324</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[LOW]</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;340.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>306</x>
+      <y>567</y>
+      <w>144</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>bg=green
+type=decision
+ButtonCurrentState</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>207</x>
+      <y>585</y>
+      <w>351</w>
+      <h>513</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[LOW]</panel_attributes>
+    <additional_attributes>370.0;550.0;10.0;550.0;20.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>441</x>
+      <y>585</y>
+      <w>216</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[HIGH]</panel_attributes>
+    <additional_attributes>180.0;80.0;180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>459</x>
+      <y>522</y>
+      <w>153</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>Falling edge detected.
+bg=#eb4949</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>531</x>
+      <y>540</y>
+      <w>54</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>40.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>531</x>
+      <y>657</y>
+      <w>144</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>bg=green
+type=decision
+PressCount
+(PC)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>675</y>
+      <w>243</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[PC &gt;= 80]</panel_attributes>
+    <additional_attributes>180.0;130.0;180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>702</y>
+      <w>117</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[40 =&lt; PC &lt; 80]</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>675</y>
+      <w>153</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[PC &lt; 40]</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>297</x>
+      <y>792</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>ButtonMode  = BUTTON_OFF
+bg=#ddebe1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>504</x>
+      <y>792</y>
+      <w>198</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>ButtonMode  = BUTTON_ON_400
+bg=#ddebe1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>729</x>
+      <y>792</y>
+      <w>207</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>ButtonMode  = BUTTON_ON_100
+bg=#ddebe1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>585</x>
+      <y>882</y>
+      <w>36</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>bg=green
+type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>819</y>
+      <w>27</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>819</y>
+      <w>234</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;240.0;90.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>819</y>
+      <w>207</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>210.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>477</x>
+      <y>963</y>
+      <w>252</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>PressCount = 0
+ButtonPreviousState = ButtonCurrentState
+bg=#ddebe1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>909</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>738</x>
+      <y>927</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>Reset PressCount
+bg=#eb4949</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>945</y>
+      <w>63</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;40.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>1008</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>729</y>
+      <w>405</w>
+      <h>369</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;390.0;430.0;390.0;430.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1044</x>
+      <y>720</y>
+      <w>387</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;400.0;410.0;400.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>540</x>
+      <y>1062</y>
+      <w>135</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>	vTaskDelay(50U)
+bg=#ddebe1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>117</x>
+      <y>333</y>
+      <w>648</w>
+      <h>828</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>700.0;10.0;10.0;10.0;10.0;900.0;540.0;900.0;540.0;850.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>72</x>
+      <y>171</y>
+      <w>1431</w>
+      <h>1008</h>
+    </coordinates>
+    <panel_attributes>
+valign=top
+lw=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>234</y>
+      <w>108</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>27</y>
+      <w>270</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=|&lt;-&gt;|
+Press Duration
+to be captured in ms
+</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+</diagram>

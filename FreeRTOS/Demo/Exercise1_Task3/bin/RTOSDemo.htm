@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\bin\RTOSDemo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\bin\RTOSDemo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Jan 16 16:09:33 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Jan 17 15:09:56 2021
 <BR><P>
 <H3>Maximum Stack Usage =        144 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -39,7 +39,7 @@ Mutually Recursive functions
 <H3>
 Function Pointers
 </H3><UL>
- <LI><a href="#[d]">ButtonTask</a> from main.o(.text) referenced from main.o(.text)
+ <LI><a href="#[d]">Button_Task</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[7]">DAbt_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[9]">FIQ_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[8]">IRQ_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
@@ -207,7 +207,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[24]"></a>GPIO_read</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ButtonTask
+<BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Button_Task
 </UL>
 
 <P><STRONG><a name="[26]"></a>GPIO_write</STRONG> (Thumb, 96 bytes, Stack size 4 bytes, gpio.o(.text))
@@ -217,9 +217,9 @@ Global Symbols
 <LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Task_100ms
 </UL>
 
-<P><STRONG><a name="[d]"></a>ButtonTask</STRONG> (Thumb, 144 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[d]"></a>Button_Task</STRONG> (Thumb, 152 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56 + Unknown Stack Size
-<LI>Call Chain = ButtonTask &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+<LI>Call Chain = Button_Task &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 <LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_read
@@ -355,7 +355,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Task_400ms
 <LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Task_100ms
-<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ButtonTask
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Button_Task
 </UL>
 
 <P><STRONG><a name="[44]"></a>uxTaskPriorityGet</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, tasks.o(.text), UNUSED)

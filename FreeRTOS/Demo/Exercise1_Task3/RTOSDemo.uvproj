@@ -426,11 +426,6 @@
               <FilePath>.\Startup.s</FilePath>
             </File>
             <File>
-              <FileName>ParTest.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ParTest\ParTest.c</FilePath>
-            </File>
-            <File>
               <FileName>serialISR.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\serial\serialISR.s</FilePath>
@@ -913,11 +908,6 @@
               <FileName>Startup.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\Startup.s</FilePath>
-            </File>
-            <File>
-              <FileName>ParTest.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ParTest\ParTest.c</FilePath>
             </File>
             <File>
               <FileName>serialISR.s</FileName>
